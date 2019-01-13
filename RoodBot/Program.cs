@@ -25,8 +25,8 @@ namespace RoodBot
 
             discord.MessageCreated += async e =>
             {
-                if (e.Message.Content.ToLower().StartsWith("jij wat maat"))
-                    await e.Message.RespondAsync("G E K O L O N I S E E R D");
+                if (e.Message.Content.ToLower().StartsWith("ping"))
+                    await e.Message.RespondAsync(e.Message.Timestamp.ToString());
             };
 
             await discord.ConnectAsync();

@@ -18,7 +18,9 @@ namespace RoodBot
             discord = new DiscordClient(new DiscordConfiguration
             {
                 Token = "NTM0MDYwOTU2MjM4NzQxNTE1.Dx0TTQ.UkR9hbwTElGiib8DDnLNYqEPUHs",
-                TokenType = TokenType.Bot
+                TokenType = TokenType.Bot,
+                UseInternalLogHandler = true,
+                LogLevel = LogLevel.Debug
             });
 
             discord.MessageCreated += async e =>
